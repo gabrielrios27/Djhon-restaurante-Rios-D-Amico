@@ -1,0 +1,39 @@
+/* --------- inicio de pestaña nuestros platos -------*/
+/*portada nuestros platos*/
+.portada-platos {
+	color: $color-principal-negro;
+	@include prefijos-transition(all 0.6s ease);
+	height: calc(100vh - 3.4375em); /*los 50px son los del menu de navegacion*/
+}
+.portada-platos__img {
+	object-fit: cover;
+	@media (max-width: 768px) {
+		height: 100%;
+		width: auto;
+		object-fit: contain;
+	}
+}
+/* galeria de platos */
+.galeria-de-platos {
+	@include flex(space-around);
+	padding: 30px 15px;
+}
+.tarjeta {
+	color: $color-principal-blanco;
+	background-color: $color-principal-negro;
+	width: 27.5em;
+	@include prefijos-transition($transition-dark);
+	border-radius: $border-radius;
+	padding-bottom: 20px;
+	margin: 30px 10px;
+}
+.tarjeta__img {
+	width: 100%;
+	border-radius: $border-radius;
+	margin-bottom: 1em;
+}
+.tarjeta__titulo,
+.tarjeta__descripcion {
+	text-align: center;
+	padding: 5px 20px;
+}

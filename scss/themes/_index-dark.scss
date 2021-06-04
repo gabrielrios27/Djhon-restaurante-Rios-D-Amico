@@ -1,0 +1,39 @@
+#dark-mode:checked ~ .home {
+	.home__titulo {
+		color: $color-principal-blanco;
+	}
+	.home__video--light {
+		@include prefijos-filter(invert(96.4%));
+	}
+}
+#dark-mode:checked ~ .home::before {
+	background-color: $color-principal-negro;
+}
+#dark-mode:checked ~ .comida {
+	background-color: $color-principal-negro;
+	.comida__link {
+		color: rgb(245, 245, 245);
+		&:hover {
+			box-shadow: 0px 0px 4px $color-principal-blanco;
+		}
+	}
+}
+#dark-mode:checked ~ #galeria {
+	background-color: $color-principal-negro;
+}
+#dark-mode:checked ~ .footer {
+	background-color: $color-principal-negro;
+	box-shadow: 0px 0px 15px #050505;
+	color: $color-principal-blanco;
+	.footer__body {
+		.footer__link {
+			color: $color-principal-blanco;
+		}
+		.footer__link:hover {
+			color: #0c62e2;
+		}
+		.footer__link--orange:hover {
+			color: #ff6c32;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+#dark-mode:checked ~ .portada-postres {
+	background-color: $color-principal-negro;
+	color: $color-principal-blanco;
+	.portada-postres__info .portada-postres__titulo {
+		color: $color-principal-blanco;
+	}
+}
+#dark-mode:checked ~ .galeria-postres .galeria-postres__img {
+	@include prefijos-filter(invert(96.4%) hue-rotate(207deg));
+}

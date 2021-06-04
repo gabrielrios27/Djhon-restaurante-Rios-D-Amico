@@ -1,0 +1,22 @@
+#dark-mode:checked ~ .portada-bebidas {
+	background-color: $color-principal-negro;
+	color: $color-principal-blanco;
+	.portada-bebidas__info .portada-bebidas__titulo {
+		color: $color-principal-blanco;
+	}
+}
+#dark-mode:checked ~ .fondo-cla-tex-osc {
+	color: $color-principal-blanco;
+	background-color: $color-principal-negro;
+	.tarjeta {
+		background-color: $color-detalle-fondo-dark-mode;
+	}
+	.logos-de-bebidas {
+		img {
+			filter: invert(94.5%);
+		}
+		.logo-cerv-guinnes {
+			filter: none;
+		}
+	}
+}

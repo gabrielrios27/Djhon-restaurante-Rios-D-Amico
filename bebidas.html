@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- ESTILOS BOOTSTRAP -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+			crossorigin="anonymous"
+		/>
+		<!-- link a estilos generales de todas las paginas-->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://kit.fontawesome.com/a8c2ca5087.js"></script>
+		<title>D'JHON-Bebidas</title>
+	</head>
+	<body>
+		<header class="header">
+			<!-- logo -->
+			<img loading="lazy" src="imagenes/logo-djon-gradiente.png" alt="Logo" class="header__logo" />
+			<!-- menu -->
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a class="nav__link" href="index.html">Inicio</a>
+						<ul class="nav__sub-list">
+							<li class="nav__sub-item">
+								<a class="nav__sub-link" href="index.html#home"> Home </a>
+							</li>
+							<li class="nav__sub-item">
+								<a class="nav__sub-link" href="index.html#restoCocinaEquipo"> Nosotros </a>
+							</li>
+							<li class="nav__sub-item">
+								<a class="nav__sub-link" href="index.html#el-menu"> El menú </a>
+							</li>
+							<li class="nav__sub-item">
+								<a class="nav__sub-link" href="index.html#galeria"> Galería </a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="nuestros-platos.html">Nuestros Platos</a>
+					</li>
+					<li class="nav__item nav__item--activo">
+						<a class="nav__link" href="bebidas.html">Bebidas</a>
+						<ul class="nav__sub-list">
+							<li class="nav__sub-item">
+								<a class="nav__sub-link" href="#seccion-vinos"> Vinos </a>
+							</li>
+							<li class="nav__sub-item">
+								<a class="nav__sub-link" href="#seccion-cervezas"> Cervezas </a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="postres.html">Postres</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="contacto.html">Contacto</a>
+					</li>
+				</ul>
+				<div class="boton-menu">
+					<input type="checkbox" id="checkbox-boton" class="boton-menu__input" />
+					<div class="boton-menu__menu">
+						<ul class="boton-menu__list">
+							<li class="boton-menu__item">
+								<a class="boton-menu__link" href="index.html">Inicio</a>
+							</li>
+							<li class="boton-menu__item">
+								<a class="boton-menu__link" href="nuestros-platos.html">Nuestros Platos</a>
+							</li>
+							<li class="boton-menu__item">
+								<a class="boton-menu__link boton-menu__item--activo" href="bebidas.html">Bebidas</a>
+							</li>
+							<li class="boton-menu__item">
+								<a class="boton-menu__link" href="postres.html">Postres</a>
+							</li>
+							<li class="boton-menu__item">
+								<a class="boton-menu__link" href="contacto.html">Contacto</a>
+							</li>
+						</ul>
+					</div>
+					<label for="checkbox-boton" class="boton-menu__hamburguesa">
+						<span class="boton-menu__lineas"></span>
+					</label>
+				</div>
+			</nav>
+		</header>
+		<!-- boton del dark mode- truco con checkbox invisible para capturar el click -->
+		<input type="checkbox" name="dark-mode" id="dark-mode" />
+		<label for="dark-mode" class="boton-dark-mode"></label>
+		<!-- portada -->
+		<section class="portada-bebidas">
+			<div class="portada-bebidas__info">
+				<h1 class="portada-bebidas__titulo">Bebidas</h1>
+				<p class="portada-bebidas__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eveniet fugiat dolor
+					tempora ad delectus? Voluptatum, quam aliquam. Molestiae, repudiandae. Laudantium
+					reprehenderit sed exercitationem eos perferendis. Porro alias quidem magni?
+				</p>
+			</div>
+			<img
+				class="portada-bebidas__img"
+				loading="lazy"
+				src="imagenes/img-bebidas/vinoteca.jpg"
+				alt="vinoteca"
+			/>
+		</section>
+		<!-- galeria con vinos y descripcion -->
+		<section class="galerias-de-bebidas fondo-osc-tex-cla" id="seccion-vinos">
+			<h2>Vinos</h2>
+			<!-- logos de marcas de vino -->
+			<div class="logos-de-bebidas">
+				<img loading="lazy" src="imagenes/img-bebidas/McGuigan-logo.jpg" alt="logo1" />
+				<img loading="lazy" src="imagenes/img-bebidas/logo-relator-copy1.png" alt="logo2" />
+				<img loading="lazy" src="imagenes/img-bebidas/graffigna.jpg" alt="logo3" />
+				<img loading="lazy" src="imagenes/img-bebidas/unnamed.png" alt="logo4" />
+				<img loading="lazy" src="imagenes/img-bebidas/Colome-white-logo-web.png" alt="logo5" />
+			</div>
+			<div class="tarjeta tarjeta--fondo-blanco">
+				<img class="tarjeta__img" loading="lazy" src="imagenes/img-bebidas/vin-33.jpg" alt="" />
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+			<div class="tarjeta tarjeta--fondo-blanco">
+				<img class="tarjeta__img" loading="lazy" src="imagenes/img-bebidas/vin-melbec.jpg" alt="" />
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+			<div class="tarjeta tarjeta--fondo-blanco">
+				<img
+					class="tarjeta__img"
+					loading="lazy"
+					src="imagenes/img-bebidas/vino-blanco.jpg"
+					alt=""
+				/>
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+			<div class="tarjeta tarjeta--fondo-blanco">
+				<img
+					class="tarjeta__img"
+					loading="lazy"
+					src="imagenes/img-bebidas/vino-chardonay.jpg"
+					alt=""
+				/>
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+			<div class="tarjeta tarjeta--fondo-blanco">
+				<img class="tarjeta__img" loading="lazy" src="imagenes/img-bebidas/vin-rojo.jpeg" alt="" />
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+			<div class="tarjeta tarjeta--fondo-blanco">
+				<img
+					class="tarjeta__img"
+					loading="lazy"
+					src="imagenes/img-bebidas/vino-rojooscuro.jpg"
+					alt=""
+				/>
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+		</section>
+		<!-- lista para saber cual es el vino adecuado para cada carne -->
+		<section id="maridaje">
+			<h2>Maridaje</h2>
+			<ul>
+				<li>
+					<h5>Chardonay</h5>
+					<ol>
+						<li>Ternera</li>
+						<li>Pollo</li>
+						<li>Lomo de Cerdo</li>
+					</ol>
+				</li>
+				<li>
+					<h5>Pinot Noir</h5>
+					<ol>
+						<li>Cordero</li>
+						<li>Filete Miñón</li>
+						<li>Pollo Rostizado</li>
+					</ol>
+				</li>
+				<li>
+					<h5>Malbec</h5>
+					<ol>
+						<li>Hamburguesas</li>
+						<li>Pato</li>
+						<li>Costillas de Cerdo</li>
+					</ol>
+				</li>
+				<li>
+					<h5>Merlot</h5>
+					<ol>
+						<li>Res Grillada</li>
+						<li>Chorizo Picante</li>
+						<li>Estofado</li>
+					</ol>
+				</li>
+			</ul>
+		</section>
+
+		<!-- galeria con cervezas y descripcion -->
+		<section class="galerias-de-bebidas fondo-cla-tex-osc" id="seccion-cervezas">
+			<h2>Cervezas</h2>
+			<!-- logos de marcas de cervezas -->
+			<div class="logos-de-bebidas">
+				<img loading="lazy" src="imagenes/img-bebidas/logo-cerv-gilbert.jpg" alt="logo-cerveza1" />
+				<img
+					loading="lazy"
+					src="imagenes/img-bebidas/logo-cerv-warsteiner.jpg"
+					alt="logo-cerveza2"
+				/>
+				<img
+					class="logo-cerv-guinnes"
+					loading="lazy"
+					src="imagenes/img-bebidas/logo-guinnes.png"
+					alt="logo-cerveza3"
+				/>
+				<img
+					loading="lazy"
+					src="imagenes/img-bebidas/patagonia-cerv-logo.jpg"
+					alt="logo-cerveza4"
+				/>
+				<img loading="lazy" src="imagenes/img-bebidas/logo-cerv-antares.jpg" alt="logo-cerveza5" />
+			</div>
+
+			<div class="tarjeta">
+				<img
+					class="tarjeta__img"
+					loading="lazy"
+					src="imagenes/img-bebidas/cerv-guinnes.jpg"
+					alt=""
+				/>
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+			<div class="tarjeta">
+				<img class="tarjeta__img" loading="lazy" src="imagenes/img-bebidas/6FB.jpg" alt="" />
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+			<div class="tarjeta">
+				<img class="tarjeta__img" loading="lazy" src="imagenes/img-bebidas/images12.png" alt="" />
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+			<div class="tarjeta">
+				<img class="tarjeta__img" loading="lazy" src="imagenes/img-bebidas/cerv-ipa.jpg" alt="" />
+				<h3 class="tarjeta__titulo">lorem</h3>
+				<p class="tarjeta__descripcion">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ut illum quia deleniti
+					inventore animi qui quis commodi numquam eum magnam quod sint sequi, nostrum vero
+					asperiores dolor. Asperiores, voluptas.
+				</p>
+			</div>
+		</section>
+		<!-- pie de pagina -->
+		<footer class="footer">
+			<!-- direccion -->
+			<address class="footer__address">Lorem ipsum dolor sit.</address>
+			<!-- iconos de facebook e instagram con enlace - apertura en nueva ventana -->
+			<div class="footer__body">
+				<a class="footer__link" href="https://www.facebook.com" target="_blanck">
+					<i class="footer__icon fab fa-facebook"></i>
+				</a>
+				<a
+					class="footer__link footer__link--orange"
+					href="https://www.instagram.com/?hl=es-la"
+					target="_blanck"
+				>
+					<i class="footer__icon fab fa-instagram"></i>
+				</a>
+			</div>
+		</footer>
+		<!-- scripts para bootstrap -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+			integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

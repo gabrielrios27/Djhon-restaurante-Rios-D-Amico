@@ -1,0 +1,14 @@
+#dark-mode:checked ~ .portada-platos {
+	background-color: $color-principal-negro;
+	color: $color-principal-blanco;
+	.portada-platos__cuerpo .portada-platos__info .portada-platos__titulo {
+		color: $color-principal-blanco;
+	}
+}
+#dark-mode:checked ~ .galeria-de-platos {
+	background-color: $color-principal-negro;
+	color: $color-principal-blanco;
+	.tarjeta {
+		background-color: $color-detalle-fondo-dark-mode;
+	}
+}

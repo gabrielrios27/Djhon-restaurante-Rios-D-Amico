@@ -1,0 +1,233 @@
+.home {
+	height: calc(100vh - 3.4375em); /*los 3.4375em son el alto del menu de navegacion*/
+	@include flex(center);
+	flex-direction: column;
+	overflow: hidden;
+}
+.home:after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	border: 2px solid $color-detalle-dorado;
+	@include prefijos-transform(translateY(-100%));
+	@include prefijos-animation(lineas 1.8s ease-in-out 1s);
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 0;
+		@include prefijos-transform(translateX(-100%));
+	}
+}
+.home:before {
+	content: '';
+	width: 0;
+	position: absolute;
+	height: 102%;
+	border: 1px solid $color-principal-blanco;
+	background-color: $color-principal-blanco;
+	box-shadow: 0 0 0 $color-detalle-dorado;
+	@include prefijos-transform(translateY(100%));
+	@include prefijos-transition(background-color 0.4s linear);
+	-webkit-animation: lineas 1.5s ease-in-out 1s forwards, ampliar 2.5s ease-in-out 1.5s forwards;
+	-o-animation: lineas 1.5s ease-in-out 1s forwards, ampliar 2.5s ease-in-out 1.5s forwards;
+	-moz-animation: lineas 1.5s ease-in-out 1s forwards, ampliar 2.5s ease-in-out 1.5s forwards;
+	animation: lineas 1.5s ease-in-out 1s forwards, ampliar 2.5s ease-in-out 1.5s forwards;
+	z-index: 2;
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 0;
+		@include prefijos-transform(translateX(100%));
+	}
+}
+
+@keyframes lineas {
+	100% {
+		@include prefijos-transform(translateY(0));
+	}
+}
+@keyframes ampliar {
+	0% {
+		width: 0;
+		box-shadow: 0 0 0 $color-detalle-dorado;
+	}
+	50% {
+		width: 0;
+		box-shadow: 0 0 0 $color-detalle-dorado;
+	}
+	100% {
+		width: 30%;
+		border: 1px solid $color-detalle-dorado;
+		box-shadow: 0 0 5px $color-detalle-dorado;
+	}
+}
+.home__img {
+	position: absolute;
+	width: auto;
+	min-width: 100%;
+	height: 100%;
+	@include prefijos-animation(animacionPortadaImg 3s forwards);
+	opacity: 0.2;
+}
+.home__titulo {
+	color: $color-principal-negro;
+	text-align: center;
+	opacity: 0;
+	@include prefijos-animation(animacionPortadaTitulos 5s 6s forwards);
+	z-index: 10;
+	font-size: 2em;
+}
+.home__video {
+	width: 220px;
+	opacity: 0;
+	@include prefijos-transition(filter 0.4s linear);
+	@include prefijos-animation(tituloVideo 2s ease 4s forwards);
+	z-index: 50;
+	@media (max-width: 1024px) {
+		width: 180px;
+	}
+	@media (max-width: 768px) {
+		width: 120px;
+	}
+}
+
+@keyframes animacionPortadaImg {
+	0% {
+		z-index: 1;
+	}
+	100% {
+		opacity: 1;
+		z-index: -1;
+	}
+}
+@keyframes animacionPortadaTitulos {
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes tituloVideo {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/*cards*/
+.cards {
+	@include flex(space-around);
+	padding: 45px 15px;
+	background-image: url(../imagenes/img-index/fondo-nosotros-comida-1800.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.card {
+	width: 18.75em;
+	height: 24em;
+	margin: 20px 5px;
+	background-color: rgba(14, 14, 14, 0.9);
+	padding: 1em;
+	border-radius: $border-radius;
+	@include prefijos-backdrop-filter(blur(2px));
+}
+.card__img {
+	width: 100%;
+	height: 12.5em;
+	border-radius: $border-radius;
+}
+.card__description {
+	color: $color-principal-blanco;
+	font-size: 1em;
+	text-align: center;
+}
+.card__title {
+	color: $color-principal-blanco;
+	font-size: 1.25em;
+	text-align: center;
+	margin: 0.5em 0;
+}
+/*intro y enlace a nuestros platos, bebidas y postres*/
+.comida {
+	@include flex(space-around);
+	padding: 1.875em 0.93em;
+	margin: auto;
+	@include prefijos-transition(all 0.5s);
+	@media (min-width: 1400px) {
+		@include flex(center);
+	}
+}
+.comida__link {
+	color: $color-principal-negro;
+	@include prefijos-transition(all 0.5s);
+	margin-bottom: 10px;
+}
+.comida__link:hover {
+	box-shadow: 1px 1px 2px #101010;
+	color: $color-principal-negro;
+}
+.comida__body {
+	width: 25em;
+	height: 14em;
+	padding: 1.56em;
+	@media (max-width: 480px) {
+		width: 20em;
+		height: 15em;
+		padding: 1.2em;
+	}
+}
+.comida__ver-mas {
+	margin-top: 0.31em;
+}
+.comida__img {
+	width: 30em;
+	height: auto;
+	@media (min-width: 1400px) {
+		margin-left: (87.5em - (30em + 25em + 0.93em * 2))/2; //para que cuando el ancho de pantalla llegue a 1400px, la imagen y el comida__link queden separadas la misma medida de separacion que traia el justify-content=space-around del contenedor padre, que a los 1400px se transforma en justify-content= center.
+	}
+	@media (max-width: 1024px) {
+		width: 25em;
+	}
+	@media (max-width: 768px) {
+		width: 28em;
+	}
+	@media (max-width: 480px) {
+		width: 20em;
+	}
+}
+.comida__img--derecha {
+	@media (min-width: 1400px) {
+		margin-left: 0; //la imagen y el comida__link estan en diferente orden al resto, asi que el margin left queda en cero y cambiamos el margin right
+		margin-right: (87.5em - (30em + 25em + 0.93em * 2))/2; //para que cuando el ancho de pantalla llegue a 1400px, la imagen y el comida__link queden separadas la misma medida de separacion que traia el justify-content=space-around del contenedor padre, que a los 1400px se transforma en justify-content= center.
+	}
+}
+#galeria {
+	@include flex(center);
+	@include prefijos-transition(all 0.5s);
+	padding: 20px;
+}
+.galeria__cuerpo {
+	max-width: 950px;
+}
+
+@media only screen and (max-width: 768px) {
+	.comida__link--order {
+		order: -1;
+	}
+
+	/* Para que la animacion de la portada sea horizontal */
+	@keyframes lineas {
+		100% {
+			@include prefijos-transform(translateX(0));
+		}
+	}
+	@keyframes ampliar {
+		0% {
+			height: 0;
+		}
+		50% {
+			height: 0;
+		}
+		100% {
+			height: 20%;
+			border: 1px solid $color-detalle-dorado;
+		}
+	}
+}

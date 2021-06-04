@@ -1,0 +1,17 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'base/estilos-generales';
+@import 'layout/header';
+@import 'components/boton-menu';
+@import 'components/boton-dark-mode';
+@import 'layout/footer';
+@import 'views/index';
+@import 'views/nuestros-platos';
+@import 'views/bebidas';
+@import 'views/postres';
+@import 'views/contacto';
+@import 'themes/index-dark';
+@import 'themes/nuestros-platos-dark';
+@import 'themes/bebidas-dark';
+@import 'themes/postres-dark';
+@import 'themes/contacto-dark';

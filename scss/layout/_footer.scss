@@ -1,0 +1,22 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.625em 1.875em;
+	box-shadow: 0px -1px 10px #dbdbdb;
+	@include prefijos-transition($transition-dark);
+}
+.footer__address {
+	margin: 0;
+}
+.footer__link {
+	color: $color-principal-negro;
+	margin: 0 7px;
+}
+.footer__link--orange:hover {
+	color: #e7561c;
+}
+.footer__icon {
+	font-size: 1.5em;
+	padding: 0.208em;
+}

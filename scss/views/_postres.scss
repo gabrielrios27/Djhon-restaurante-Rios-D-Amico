@@ -1,0 +1,46 @@
+/*-------------------inicio de Postres---------------------------------*/
+.portada-postres {
+	color: $color-principal-negro;
+	@include flex(space-around);
+	@include prefijos-transition($transition-dark);
+	height: calc(100vh - 3.4375em); /*los 50px son los del menu de navegacion*/
+	div {
+		width: 25em;
+	}
+}
+.portada-postres__video {
+	width: 30em;
+	height: 30em;
+}
+/*galeria de postres*/
+.galeria-postres {
+	@include flex(space-around);
+	padding: 30px 15px;
+	position: relative;
+}
+/* fondo rosa detras de galeria */
+.galeria-postres__img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	@include prefijos-transition($transition-dark);
+	background-color: $color-principal-blanco;
+	z-index: -1;
+}
+/*presentacion chef pastelera*/
+.presentacion-chef {
+	background-color: $color-principal-blanco;
+	@include flex(space-around);
+	margin: 5em 4em;
+}
+.presentacion-chef__img {
+	width: 25em;
+}
+.presentacion-chef__info {
+	margin: 20px;
+	width: 50%;
+}
+.presentacion-chef__titulo {
+	color: $color-detalle-dorado;
+}

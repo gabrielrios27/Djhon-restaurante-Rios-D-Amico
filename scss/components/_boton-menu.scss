@@ -1,0 +1,112 @@
+/*estilos del boton menu*/
+.boton-menu {
+	display: none;
+	background: linear-gradient(to top, #030303, $color-principal-negro);
+	@media (max-width: 768px) {
+		display: block;
+		background-color: #050505;
+	}
+}
+.boton-menu__input {
+	display: none;
+}
+.boton-menu__menu {
+	padding: 40px;
+	position: absolute;
+	top: 50vh;
+	right: 50vw;
+	@include prefijos-transform(translate(50%, -45%));
+	opacity: 0;
+	@include prefijos-transition(0.29s 0s ease-in-out);
+}
+.boton-menu__list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.boton-menu__item {
+	list-style: none;
+	border-radius: $border-radius;
+	margin: 1px;
+}
+.boton-menu__link {
+	width: 210px;
+	height: 60px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+	text-align: center;
+}
+.boton-menu__link:hover {
+	color: $color-principal-blanco;
+}
+.boton-menu__item:hover {
+	background-color: rgba(245, 204, 22, 0.657);
+}
+.boton-menu__item--activo {
+	background-color: rgba(245, 204, 22, 0.657);
+}
+.boton-menu__hamburguesa {
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(to top, #050505, $color-principal-negro);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	@include prefijos-transition(0.5s ease-in-out);
+	box-shadow: 0 0 0 0vw rgba(14, 14, 14, 0.4);
+	border-radius: 50px;
+	z-index: 200;
+}
+.boton-menu__lineas {
+	@include prefijos-transition(0.5s ease-in-out);
+	width: 30px;
+	height: 2px;
+	background-color: $color-principal-blanco;
+	position: absolute;
+	display: block;
+}
+.boton-menu__lineas::after,
+.boton-menu__lineas::before {
+	@include prefijos-transition(0.5s ease-in-out);
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: $color-principal-blanco;
+	display: block;
+}
+.boton-menu__lineas::after {
+	top: -10px;
+}
+.boton-menu__lineas::before {
+	bottom: -10px;
+}
+#checkbox-boton:checked ~ .boton-menu__hamburguesa .boton-menu__lineas {
+	@include prefijos-transform(rotate(45deg));
+}
+#checkbox-boton:checked ~ .boton-menu__hamburguesa .boton-menu__lineas:after {
+	@include prefijos-transform(rotate(90deg));
+	top: 0;
+}
+#checkbox-boton:checked ~ .boton-menu__hamburguesa .boton-menu__lineas:before {
+	@include prefijos-transform(rotate(90deg));
+	bottom: 0;
+}
+#checkbox-boton:checked ~ .boton-menu__hamburguesa {
+	box-shadow: 0 0 0 200vw rgba(14, 14, 14, 0.95);
+	border-radius: 0;
+	background: #0e0e0e;
+}
+#checkbox-boton:checked ~ .boton-menu__menu {
+	opacity: 1;
+	z-index: 300;
+}
+#checkbox-boton:checked ~ .boton-menu__menu .boton-menu__list .boton-menu__item .boton-menu__link {
+	display: flex;
+}
