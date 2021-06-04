@@ -1,0 +1,6 @@
+#dark-mode:checked ~ .formulario {
+	background-color: $color-detalle-fondo-dark-mode;
+	.formulario__titulo {
+		color: $color-principal-blanco;
+	}
+}

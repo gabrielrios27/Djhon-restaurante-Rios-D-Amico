@@ -1082,10 +1082,22 @@ a {
 .formulario {
   grid-area: formulario;
   color: #0e0e0e;
-  width: 500px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.formulario .formulario__titulo {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .formulario__form {
@@ -1212,6 +1224,13 @@ a {
 #dark-mode:checked ~ .galeria-postres .galeria-postres__img {
   -webkit-filter: invert(96.4%) hue-rotate(207deg);
   filter: invert(96.4%) hue-rotate(207deg);
+}
+
+#dark-mode:checked ~ .formulario {
+  background-color: #1f1f1f;
+}
+#dark-mode:checked ~ .formulario .formulario__titulo {
+  color: #fafafa;
 }
 
 /*# sourceMappingURL=style.css.map */

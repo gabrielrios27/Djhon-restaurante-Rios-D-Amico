@@ -42,10 +42,16 @@
 .formulario {
 	grid-area: formulario;
 	color: $color-principal-negro;
-	width: 500px;
+	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	@include prefijos-transition($transition-dark);
+	.formulario__titulo {
+		@include prefijos-transition($transition-dark);
+	}
 }
 .formulario__form {
 	background-color: $color-detalle-dorado-translucido;
