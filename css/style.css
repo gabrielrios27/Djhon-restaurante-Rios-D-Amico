@@ -566,6 +566,10 @@ a {
   opacity: 0.2;
 }
 
+.home__nombre {
+  display: none;
+}
+
 .home__titulo {
   color: #0e0e0e;
   text-align: center;

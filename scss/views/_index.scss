@@ -67,6 +67,9 @@
 	@include prefijos-animation(animacionPortadaImg 3s forwards);
 	opacity: 0.2;
 }
+.home__nombre {
+	display: none;
+}
 .home__titulo {
 	color: $color-principal-negro;
 	text-align: center;
