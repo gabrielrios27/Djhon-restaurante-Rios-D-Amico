@@ -1,0 +1,84 @@
+<head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.body {
+			width: 100vw;
+			height: 100vh;
+			background-image: url('https://i.ibb.co/D50t9CL/fondo-404.jpg');
+			background-size: cover;
+			overflow-x: hidden;
+			padding: 3% 7%;
+		}
+		.cuerpo {
+			width: 100%;
+			height: 100%;
+			background-color: rgba(241, 241, 241, 0.94);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			border-radius: 3px;
+		}
+		.body__cuerpo-img {
+			position: relative;
+			width: 180px;
+			height: 180px;
+		}
+		.body__cuerpo-img::before {
+			content: '4';
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: -60px;
+			font-size: 130px;
+			z-index: 40;
+			padding-top: 20px;
+		}
+		.body__cuerpo-img::after {
+			content: '4';
+			width: 100%;
+			position: absolute;
+			top: 0;
+			right: -175px;
+			font-size: 130px;
+			z-index: 50;
+			padding-top: 20px;
+		}
+		.body__img {
+			width: 180px;
+		}
+		.body__titulo {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.body__boton {
+			text-decoration: none;
+			color: rgb(247, 247, 247);
+			background-color: rgb(245, 163, 40);
+			border-radius: 3px;
+			padding: 6px 12px;
+			transition: all 0.3s;
+			font-size: 20px;
+		}
+		.body__boton:hover {
+			background-color: rgb(252, 154, 7);
+			box-shadow: 0 0 5px rgba(41, 41, 41, 0.555);
+		}
+	</style>
+</head>
+<body class="body">
+	<div class="cuerpo">
+		<div class="body__cuerpo-img">
+			<img
+				class="body__img"
+				src="https://i.ibb.co/2hSjxr6/parilla-djhon.png"
+				alt="parrillada de brochetas de carne y verduras, costillas y salchichas"
+			/>
+		</div>
+		<h2 class="body__titulo">OOPS! Esta página no se encuentra en el servidor.</h2>
+		<a class="body__boton" href="index.html">Home</a>
+	</div>
+</body>
