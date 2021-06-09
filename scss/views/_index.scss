@@ -38,7 +38,19 @@
 		@include prefijos-transform(translateX(100%));
 	}
 }
-
+.home__video {
+	width: 220px;
+	opacity: 0;
+	@include prefijos-transition(filter 0.4s linear);
+	@include prefijos-animation(tituloVideo 2s ease 4s forwards);
+	z-index: 50;
+	@media (max-width: 1024px) {
+		width: 180px;
+	}
+	@media (max-width: 768px) {
+		width: 120px;
+	}
+}
 @keyframes lineas {
 	100% {
 		@include prefijos-transform(translateY(0));
@@ -78,20 +90,6 @@
 	z-index: 10;
 	font-size: 2em;
 }
-.home__video {
-	width: 220px;
-	opacity: 0;
-	@include prefijos-transition(filter 0.4s linear);
-	@include prefijos-animation(tituloVideo 2s ease 4s forwards);
-	z-index: 50;
-	@media (max-width: 1024px) {
-		width: 180px;
-	}
-	@media (max-width: 768px) {
-		width: 120px;
-	}
-}
-
 @keyframes animacionPortadaImg {
 	0% {
 		z-index: 1;

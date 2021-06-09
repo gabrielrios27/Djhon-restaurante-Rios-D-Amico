@@ -2,7 +2,7 @@
 /*portada nuestros platos*/
 .portada-platos {
 	color: $color-principal-negro;
-	@include prefijos-transition(all 0.6s ease);
+	@include prefijos-transition($transition-dark);
 	height: calc(100vh - 3.4375em); /*los 50px son los del menu de navegacion*/
 }
 .portada-platos__img {
@@ -16,6 +16,7 @@
 /* galeria de platos */
 .galeria-de-platos {
 	@include flex(space-around);
+	@include prefijos-transition($transition-dark);
 	padding: 30px 15px;
 }
 .tarjeta {
