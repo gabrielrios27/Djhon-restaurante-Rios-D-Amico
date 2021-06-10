@@ -63,6 +63,7 @@ a {
   justify-content: space-around;
   list-style: none;
   margin: 0;
+  padding-right: 30px;
 }
 @media (max-width: 768px) {
   .nav__list {
@@ -360,10 +361,10 @@ a {
   width: 40px;
   height: 20px;
   border-radius: 20px;
-  top: 3.58em;
+  top: calc((3.58em - 24px) / 2);
   right: 5px;
   cursor: pointer;
-  z-index: 80;
+  z-index: 110;
   overflow: hidden;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
