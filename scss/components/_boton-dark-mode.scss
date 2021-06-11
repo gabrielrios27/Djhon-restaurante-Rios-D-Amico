@@ -3,12 +3,15 @@
 }
 .boton-dark-mode {
 	position: fixed;
-	background-color: rgb(242, 248, 250);
-	box-shadow: 0 0 2px rgb(27, 27, 27);
-	width: 40px;
-	height: 20px;
-	border-radius: 20px;
-	top: calc((3.58em - 24px) / 2);
+	background-image: url(../imagenes/mitad-planeta-dia.png);
+	background-size: 70%;
+	background-repeat: no-repeat;
+	// background-position-y: bottom;
+	background-position: bottom right;
+	width: 90px;
+	height: 3.4375em;
+	padding: 0 30px;
+	top: 0;
 	right: 5px;
 	cursor: pointer;
 	z-index: 110;
@@ -26,7 +29,7 @@
 	box-sizing: border-box;
 	@include prefijos-transition($transition-dark);
 	top: -2px;
-	left: 0px;
+	right: 3px;
 }
 .boton-dark-mode::before {
 	content: '';
@@ -38,15 +41,16 @@
 	position: absolute;
 	box-sizing: border-box;
 	top: 0;
-	right: -20px;
+	right: -30px;
 	@include prefijos-transition($transition-dark);
 }
 #dark-mode:checked ~ .boton-dark-mode {
-	background-color: rgb(2, 5, 46);
+	background-image: url(../imagenes/mitad-noche.png);
 }
 #dark-mode:checked ~ .boton-dark-mode::after {
-	@include prefijos-transform(translateX(-25px));
+	@include prefijos-transform(translateX(-50px));
+	opacity: 0;
 }
 #dark-mode:checked ~ .boton-dark-mode::before {
-	@include prefijos-transform(translateX(-21px));
+	@include prefijos-transform(translateX(-29px));
 }

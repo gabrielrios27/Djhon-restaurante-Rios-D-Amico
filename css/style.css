@@ -356,12 +356,14 @@ a {
 
 .boton-dark-mode {
   position: fixed;
-  background-color: #f2f8fa;
-  box-shadow: 0 0 2px #1b1b1b;
-  width: 40px;
-  height: 20px;
-  border-radius: 20px;
-  top: calc((3.58em - 24px) / 2);
+  background-image: url(../imagenes/mitad-planeta-dia.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  width: 90px;
+  height: 3.4375em;
+  padding: 0 30px;
+  top: 0;
   right: 5px;
   cursor: pointer;
   z-index: 110;
@@ -387,7 +389,7 @@ a {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   top: -2px;
-  left: 0px;
+  right: 3px;
 }
 
 .boton-dark-mode::before {
@@ -401,7 +403,7 @@ a {
   position: absolute;
   box-sizing: border-box;
   top: 0;
-  right: -20px;
+  right: -30px;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -409,23 +411,24 @@ a {
 }
 
 #dark-mode:checked ~ .boton-dark-mode {
-  background-color: #02052e;
+  background-image: url(../imagenes/mitad-noche.png);
 }
 
 #dark-mode:checked ~ .boton-dark-mode::after {
-  -webkit-transform: translateX(-25px);
-  -o-transform: translateX(-25px);
-  -moz-transform: translateX(-25px);
-  -ms-transform: translateX(-25px);
-  transform: translateX(-25px);
+  -webkit-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  transform: translateX(-50px);
+  opacity: 0;
 }
 
 #dark-mode:checked ~ .boton-dark-mode::before {
-  -webkit-transform: translateX(-21px);
-  -o-transform: translateX(-21px);
-  -moz-transform: translateX(-21px);
-  -ms-transform: translateX(-21px);
-  transform: translateX(-21px);
+  -webkit-transform: translateX(-29px);
+  -o-transform: translateX(-29px);
+  -moz-transform: translateX(-29px);
+  -ms-transform: translateX(-29px);
+  transform: translateX(-29px);
 }
 
 .footer {
