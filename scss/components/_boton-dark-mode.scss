@@ -4,19 +4,20 @@
 .boton-dark-mode {
 	position: fixed;
 	background-image: url(../imagenes/mitad-planeta-dia.png);
-	background-size: 70%;
+	background-size: 4.06em;
 	background-repeat: no-repeat;
-	// background-position-y: bottom;
 	background-position: bottom right;
-	width: 90px;
+	width: 80px;
 	height: 3.4375em;
-	padding: 0 30px;
 	top: 0;
 	right: 5px;
 	cursor: pointer;
 	z-index: 110;
 	overflow: hidden;
 	@include prefijos-transition($transition-dark);
+	@media (max-width: 768px) {
+		display: none;
+	}
 }
 .boton-dark-mode::after {
 	content: '';
@@ -29,7 +30,7 @@
 	box-sizing: border-box;
 	@include prefijos-transition($transition-dark);
 	top: -2px;
-	right: 3px;
+	right: 0px;
 }
 .boton-dark-mode::before {
 	content: '';
@@ -48,7 +49,7 @@
 	background-image: url(../imagenes/mitad-noche.png);
 }
 #dark-mode:checked ~ .boton-dark-mode::after {
-	@include prefijos-transform(translateX(-50px));
+	@include prefijos-transform(translateX(10px));
 	opacity: 0;
 }
 #dark-mode:checked ~ .boton-dark-mode::before {

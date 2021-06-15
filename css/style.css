@@ -357,12 +357,11 @@ a {
 .boton-dark-mode {
   position: fixed;
   background-image: url(../imagenes/mitad-planeta-dia.png);
-  background-size: 70%;
+  background-size: 4.06em;
   background-repeat: no-repeat;
   background-position: bottom right;
-  width: 90px;
+  width: 80px;
   height: 3.4375em;
-  padding: 0 30px;
   top: 0;
   right: 5px;
   cursor: pointer;
@@ -372,6 +371,11 @@ a {
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .boton-dark-mode {
+    display: none;
+  }
 }
 
 .boton-dark-mode::after {
@@ -389,7 +393,7 @@ a {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   top: -2px;
-  right: 3px;
+  right: 0px;
 }
 
 .boton-dark-mode::before {
@@ -415,11 +419,11 @@ a {
 }
 
 #dark-mode:checked ~ .boton-dark-mode::after {
-  -webkit-transform: translateX(-50px);
-  -o-transform: translateX(-50px);
-  -moz-transform: translateX(-50px);
-  -ms-transform: translateX(-50px);
-  transform: translateX(-50px);
+  -webkit-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
   opacity: 0;
 }
 
