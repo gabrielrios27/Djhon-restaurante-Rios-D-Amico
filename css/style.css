@@ -44,7 +44,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5625em;
+  padding: 0 2.5em;
   position: fixed;
   top: 0;
   left: 0;
@@ -374,7 +374,18 @@ a {
 }
 @media (max-width: 768px) {
   .boton-dark-mode {
-    display: none;
+    background-color: #2094e2;
+    box-shadow: 0 0 2px #1b1b1b;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    top: 15px;
+    right: -5px;
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 }
 
@@ -395,6 +406,13 @@ a {
   top: -2px;
   right: 0px;
 }
+@media (max-width: 768px) {
+  .boton-dark-mode::after {
+    left: 0px;
+    -webkit-filter: drop-shadow(0 1px 2px rgba(255, 196, 0, 0.822));
+    filter: drop-shadow(0 1px 2px rgba(255, 196, 0, 0.822));
+  }
+}
 
 .boton-dark-mode::before {
   content: "";
@@ -413,9 +431,19 @@ a {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+@media (max-width: 768px) {
+  .boton-dark-mode::before {
+    right: -20px;
+  }
+}
 
 #dark-mode:checked ~ .boton-dark-mode {
   background-image: url(../imagenes/mitad-noche.png);
+}
+@media (max-width: 768px) {
+  #dark-mode:checked ~ .boton-dark-mode {
+    background-color: #02052e;
+  }
 }
 
 #dark-mode:checked ~ .boton-dark-mode::after {
@@ -426,6 +454,15 @@ a {
   transform: translateX(10px);
   opacity: 0;
 }
+@media (max-width: 768px) {
+  #dark-mode:checked ~ .boton-dark-mode::after {
+    -webkit-transform: translateX(-25px);
+    -o-transform: translateX(-25px);
+    -moz-transform: translateX(-25px);
+    -ms-transform: translateX(-25px);
+    transform: translateX(-25px);
+  }
+}
 
 #dark-mode:checked ~ .boton-dark-mode::before {
   -webkit-transform: translateX(-29px);
@@ -433,6 +470,15 @@ a {
   -moz-transform: translateX(-29px);
   -ms-transform: translateX(-29px);
   transform: translateX(-29px);
+}
+@media (max-width: 768px) {
+  #dark-mode:checked ~ .boton-dark-mode::before {
+    -webkit-transform: translateX(-21px);
+    -o-transform: translateX(-21px);
+    -moz-transform: translateX(-21px);
+    -ms-transform: translateX(-21px);
+    transform: translateX(-21px);
+  }
 }
 
 .footer {

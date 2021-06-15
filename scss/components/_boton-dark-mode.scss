@@ -16,7 +16,14 @@
 	overflow: hidden;
 	@include prefijos-transition($transition-dark);
 	@media (max-width: 768px) {
-		display: none;
+		background-color: rgb(32, 148, 226);
+		box-shadow: 0 0 2px rgb(27, 27, 27);
+		width: 40px;
+		height: 20px;
+		border-radius: 20px;
+		top: 15px;
+		right: -5px;
+		@include prefijos-transform(rotate(90deg));
 	}
 }
 .boton-dark-mode::after {
@@ -31,6 +38,10 @@
 	@include prefijos-transition($transition-dark);
 	top: -2px;
 	right: 0px;
+	@media (max-width: 768px) {
+		left: 0px;
+		@include prefijos-filter(drop-shadow(0 1px 2px rgba(255, 196, 0, 0.822)));
+	}
 }
 .boton-dark-mode::before {
 	content: '';
@@ -44,14 +55,77 @@
 	top: 0;
 	right: -30px;
 	@include prefijos-transition($transition-dark);
+	@media (max-width: 768px) {
+		right: -20px;
+	}
 }
 #dark-mode:checked ~ .boton-dark-mode {
 	background-image: url(../imagenes/mitad-noche.png);
+	@media (max-width: 768px) {
+		background-color: rgb(2, 5, 46);
+	}
 }
 #dark-mode:checked ~ .boton-dark-mode::after {
 	@include prefijos-transform(translateX(10px));
 	opacity: 0;
+	@media (max-width: 768px) {
+		@include prefijos-transform(translateX(-25px));
+	}
 }
 #dark-mode:checked ~ .boton-dark-mode::before {
 	@include prefijos-transform(translateX(-29px));
+	@media (max-width: 768px) {
+		@include prefijos-transform(translateX(-21px));
+	}
 }
+// ---------------
+
+// .boton-dark-mode {
+// 	position: fixed;
+// 	background-color: rgb(242, 248, 250);
+// 	box-shadow: 0 0 2px rgb(27, 27, 27);
+// 	width: 40px;
+// 	height: 20px;
+// 	border-radius: 20px;
+// 	top: 3.58em;
+// 	right: 5px;
+// 	cursor: pointer;
+// 	z-index: 80;
+// 	overflow: hidden;
+// 	@include prefijos-transition($transition-dark);
+// }
+// .boton-dark-mode::after {
+// 	content: '';
+// 	width: 24px;
+// 	height: 24px;
+// 	background-image: url(../imagenes/sol.png);
+// 	@include prefijos-filter(drop-shadow(0 3px 6px rgba(255, 196, 0, 0.822)));
+// 	background-size: contain;
+// 	position: absolute;
+// 	box-sizing: border-box;
+// 	@include prefijos-transition($transition-dark);
+// 	top: -2px;
+// 	left: 0px;
+// }
+// .boton-dark-mode::before {
+// 	content: '';
+// 	width: 20px;
+// 	height: 20px;
+// 	background-image: url(../imagenes/luna.png);
+// 	@include prefijos-filter(drop-shadow(0 2px 6px rgba(240, 235, 219, 0.7)));
+// 	background-size: contain;
+// 	position: absolute;
+// 	box-sizing: border-box;
+// 	top: 0;
+// 	right: -20px;
+// 	@include prefijos-transition($transition-dark);
+// }
+// #dark-mode:checked ~ .boton-dark-mode {
+// 	background-color: rgb(2, 5, 46);
+// }
+// #dark-mode:checked ~ .boton-dark-mode::after {
+// 	@include prefijos-transform(translateX(-25px));
+// }
+// #dark-mode:checked ~ .boton-dark-mode::before {
+// 	@include prefijos-transform(translateX(-21px));
+// }
