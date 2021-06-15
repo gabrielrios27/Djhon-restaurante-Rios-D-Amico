@@ -1,6 +1,43 @@
 #dark-mode {
 	display: none;
 }
+.cartel-dark-mode {
+	position: fixed;
+	width: 3.65em;
+	height: 16px;
+	right: 8px;
+	top: 3.4375em;
+	border-radius: 0 0 6px 6px;
+	border: none;
+}
+
+.cartel-dark-mode::after {
+	content: 'LIGHT MODE';
+	position: absolute;
+	font-size: 12px;
+	font-weight: 700;
+	width: 100%;
+	text-align: center;
+	text-shadow: 0 0 4px white;
+	@include prefijos-transition($transition-dark);
+}
+.cartel-dark-mode::before {
+	content: 'DARK MODE';
+	position: absolute;
+	font-size: 12px;
+	font-weight: 700;
+	width: 100%;
+	text-align: center;
+	text-shadow: 0 0 4px white;
+	opacity: 0;
+	@include prefijos-transition($transition-dark);
+}
+#dark-mode:checked ~ .cartel-dark-mode::after {
+	opacity: 0;
+}
+#dark-mode:checked ~ .cartel-dark-mode::before {
+	opacity: 1;
+}
 .boton-dark-mode {
 	position: fixed;
 	background-image: url(../imagenes/mitad-planeta-dia.png);
@@ -18,7 +55,7 @@
 	@media (max-width: 768px) {
 		background-color: rgb(32, 148, 226);
 		box-shadow: 0 0 2px rgb(27, 27, 27);
-		width: 40px;
+		width: 35px;
 		height: 20px;
 		border-radius: 20px;
 		top: 15px;

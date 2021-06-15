@@ -11,6 +11,10 @@
 .portada-postres__video {
 	width: 30em;
 	height: 30em;
+	@media (max-width: 480px) {
+		width: 25em;
+		height: 25em;
+	}
 }
 /*galeria de postres*/
 .galeria-postres {
