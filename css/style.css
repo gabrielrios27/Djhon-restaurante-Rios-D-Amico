@@ -428,7 +428,7 @@ a {
   font-size: 10px;
   width: 100%;
   text-align: center;
-  padding-top: 1px;
+  top: 1px;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -447,7 +447,7 @@ a {
   font-size: 10px;
   width: 100%;
   text-align: center;
-  padding-top: 2px;
+  top: 1px;
   opacity: 0;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
