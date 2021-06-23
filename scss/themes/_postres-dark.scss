@@ -5,6 +5,14 @@
 		color: $color-principal-blanco;
 	}
 }
-#dark-mode:checked ~ .galeria-postres .galeria-postres__img {
-	@include prefijos-filter(invert(96.4%) hue-rotate(207deg));
+#dark-mode:checked ~ .portada-postres .portada-postres__img {
+	background-image: url(../imagenes/img-postres/Postre-helado.png);
+}
+#dark-mode:checked ~ .galeria-postres {
+	background-image: url(../imagenes/img-postres/bg-3.svg);
+	background-color: $color-principal-negro;
+}
+#dark-mode:checked ~ .presentacion-chef {
+	background-color: $color-principal-negro;
+	color: $color-principal-blanco;
 }
