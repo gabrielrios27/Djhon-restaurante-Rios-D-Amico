@@ -11,6 +11,9 @@
 #dark-mode:checked ~ .galeria-postres {
 	background-image: url(../imagenes/img-postres/bg-3.svg);
 	background-color: $color-principal-negro;
+	.tarjeta {
+		background-color: $color-detalle-fondo-dark-mode;
+	}
 }
 #dark-mode:checked ~ .presentacion-chef {
 	background-color: $color-principal-negro;

@@ -1232,7 +1232,7 @@ a {
 
 .presentacion-chef__info {
   margin: 20px;
-  width: 50%;
+  width: 25em;
 }
 
 .presentacion-chef__titulo {
@@ -1432,6 +1432,9 @@ a {
 #dark-mode:checked ~ .galeria-postres {
   background-image: url(../imagenes/img-postres/bg-3.svg);
   background-color: #0e0e0e;
+}
+#dark-mode:checked ~ .galeria-postres .tarjeta {
+  background-color: #1f1f1f;
 }
 
 #dark-mode:checked ~ .presentacion-chef {
