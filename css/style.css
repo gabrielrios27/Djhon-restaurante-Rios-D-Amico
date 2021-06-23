@@ -1170,18 +1170,27 @@ a {
   height: calc(100vh - 3.4375em);
   /*los 50px son los del menu de navegacion*/
 }
-.portada-postres div {
+
+.portada-postres__info {
   width: 25em;
+  padding: 0 20px;
 }
 
-.portada-postres__video {
+.portada-postres__img {
   width: 30em;
-  height: 30em;
+  height: 20.913em;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-image: url(../imagenes/img-postres/frutillapostre.png);
+  background-position: center;
+  background-size: cover;
 }
 @media (max-width: 480px) {
-  .portada-postres__video {
+  .portada-postres__img {
     width: 25em;
-    height: 25em;
+    height: 17.4275em;
   }
 }
 
@@ -1193,20 +1202,13 @@ a {
   flex-wrap: wrap;
   padding: 30px 15px;
   position: relative;
-}
-
-/* fondo rosa detras de galeria */
-.galeria-postres__img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  background-image: url(../imagenes/img-postres/bg-2.svg);
   background-color: #fafafa;
-  z-index: -1;
+  background-size: cover;
 }
 
 /*presentacion chef pastelera*/
@@ -1216,11 +1218,16 @@ a {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin: 5em 4em;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  padding: 5em 4em;
 }
 
 .presentacion-chef__img {
   width: 25em;
+  border-radius: 0.3125em;
 }
 
 .presentacion-chef__info {
@@ -1230,6 +1237,7 @@ a {
 
 .presentacion-chef__titulo {
   color: #ffc023;
+  text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.884);
 }
 
 /*-----------------inicio de contacto-------------------------------------*/
@@ -1417,9 +1425,18 @@ a {
   color: #fafafa;
 }
 
-#dark-mode:checked ~ .galeria-postres .galeria-postres__img {
-  -webkit-filter: invert(96.4%) hue-rotate(207deg);
-  filter: invert(96.4%) hue-rotate(207deg);
+#dark-mode:checked ~ .portada-postres .portada-postres__img {
+  background-image: url(../imagenes/img-postres/Postre-helado.png);
+}
+
+#dark-mode:checked ~ .galeria-postres {
+  background-image: url(../imagenes/img-postres/bg-3.svg);
+  background-color: #0e0e0e;
+}
+
+#dark-mode:checked ~ .presentacion-chef {
+  background-color: #0e0e0e;
+  color: #fafafa;
 }
 
 #dark-mode:checked ~ .formulario {
