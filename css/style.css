@@ -1066,12 +1066,12 @@ a {
 }
 
 /* galerias de bebidas */
-.fondo-osc-tex-cla {
+.galerias-de-bebidas__fondo-oscuro {
   color: #fafafa;
   background-color: #0e0e0e;
 }
 
-.fondo-cla-tex-osc {
+.galerias-de-bebidas__fondo-claro {
   color: #0e0e0e;
   background-color: #fafafa;
 }
@@ -1087,13 +1087,33 @@ a {
   transition: all 0.5s ease-in-out;
   padding: 60px 15px 30px 15px;
 }
-.galerias-de-bebidas h2 {
+.galerias-de-bebidas .galerias-de-bebidas__cartel-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 200px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.galerias-de-bebidas .galerias-de-bebidas__cartel-titulo .galerias-de-bebidas__titulo {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 42px;
+  text-shadow: 1px 1px 2px rgba(20, 20, 20, 0.76);
+  color: #fafafa;
 }
 
-.logos-de-bebidas {
+.galerias-de-bebidas__cartel-titulo--vinos {
+  background-image: url(../imagenes/img-bebidas/cartel-vinos.png);
+}
+
+.galerias-de-bebidas__cartel-titulo--cervezas {
+  background-image: url(../imagenes/img-bebidas/cartel-cervezas.png);
+}
+
+.galerias-de-bebidas__logos {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1105,7 +1125,7 @@ a {
   margin: 30px 15px;
   width: 100%;
 }
-.logos-de-bebidas img {
+.galerias-de-bebidas__logos img {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -1176,6 +1196,13 @@ a {
   padding: 0 20px;
 }
 
+.portada-postres__titulo {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 .portada-postres__img {
   width: 30em;
   height: 20.913em;
@@ -1186,6 +1213,12 @@ a {
   background-image: url(../imagenes/img-postres/frutillapostre.png);
   background-position: center;
   background-size: cover;
+}
+@media (min-width: 1224px) {
+  .portada-postres__img {
+    width: 40em;
+    height: 27.884em;
+  }
 }
 @media (max-width: 480px) {
   .portada-postres__img {
@@ -1215,7 +1248,7 @@ a {
 .presentacion-chef {
   background-color: #fafafa;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   -webkit-transition: all 0.5s ease-in-out;
@@ -1228,6 +1261,7 @@ a {
 .presentacion-chef__img {
   width: 25em;
   border-radius: 0.3125em;
+  margin: 0 40px;
 }
 
 .presentacion-chef__info {
@@ -1403,17 +1437,17 @@ a {
   color: #fafafa;
 }
 
-#dark-mode:checked ~ .fondo-cla-tex-osc {
+#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro {
   color: #fafafa;
   background-color: #0e0e0e;
 }
-#dark-mode:checked ~ .fondo-cla-tex-osc .tarjeta {
+#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro .tarjeta {
   background-color: #1f1f1f;
 }
-#dark-mode:checked ~ .fondo-cla-tex-osc .logos-de-bebidas img {
+#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro .galerias-de-bebidas__logos img {
   filter: invert(94.5%);
 }
-#dark-mode:checked ~ .fondo-cla-tex-osc .logos-de-bebidas .logo-cerv-guinnes {
+#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro .galerias-de-bebidas__logos .galerias-de-bebidas__logo--guinnes {
   filter: none;
 }
 

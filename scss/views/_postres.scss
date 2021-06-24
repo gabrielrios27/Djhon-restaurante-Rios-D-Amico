@@ -9,6 +9,9 @@
 	width: 25em;
 	padding: 0 20px;
 }
+.portada-postres__titulo {
+	@include prefijos-transition($transition-dark);
+}
 .portada-postres__img {
 	width: 30em;
 	height: 30em * 0.6971;
@@ -16,6 +19,10 @@
 	background-image: url(../imagenes/img-postres/frutillapostre.png);
 	background-position: center;
 	background-size: cover;
+	@media (min-width: 1224px) {
+		width: 40em;
+		height: 40em * 0.6971;
+	}
 	@media (max-width: 480px) {
 		width: 25em;
 		height: 25em * 0.6971;
@@ -35,17 +42,19 @@
 /*presentacion chef pastelera*/
 .presentacion-chef {
 	background-color: $color-principal-blanco;
-	@include flex(space-around);
+	@include flex(center);
 	@include prefijos-transition($transition-dark);
 	padding: 5em 4em;
 }
 .presentacion-chef__img {
 	width: 25em;
 	border-radius: $border-radius;
+	margin: 0 40px;
 }
 .presentacion-chef__info {
 	margin: 20px;
 	width: 25em;
+
 }
 .presentacion-chef__titulo {
 	color: $color-detalle-dorado;

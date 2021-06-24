@@ -14,11 +14,11 @@
 	}
 }
 /* galerias de bebidas */
-.fondo-osc-tex-cla {
+.galerias-de-bebidas__fondo-oscuro {
 	color: $color-principal-blanco;
 	background-color: $color-principal-negro;
 }
-.fondo-cla-tex-osc {
+.galerias-de-bebidas__fondo-claro {
 	color: $color-principal-negro;
 	background-color: $color-principal-blanco;
 }
@@ -26,13 +26,28 @@
 	@include flex(space-around);
 	@include prefijos-transition($transition-dark);
 	padding: 60px 15px 30px 15px;
-	h2 {
-		text-align: center;
-		margin-bottom: 20px;
-		font-size: 30px;
+	.galerias-de-bebidas__cartel-titulo{
+		@include flex(center);
+		width: 250px;
+		height: 200px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		.galerias-de-bebidas__titulo{
+			text-align: center;
+			font-size: 42px;
+			text-shadow: 1px 1px 2px rgba(20, 20, 20, 0.76);
+			color: $color-principal-blanco;
+		}
 	}
 }
-.logos-de-bebidas {
+.galerias-de-bebidas__cartel-titulo--vinos{
+	background-image: url(../imagenes/img-bebidas/cartel-vinos.png)
+}
+.galerias-de-bebidas__cartel-titulo--cervezas{
+	background-image: url(../imagenes/img-bebidas/cartel-cervezas.png)
+}
+.galerias-de-bebidas__logos {
 	@include flex(space-around);
 	@include prefijos-transition($transition-dark);
 	margin: 30px 15px;

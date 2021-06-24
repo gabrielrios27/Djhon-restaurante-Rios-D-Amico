@@ -5,17 +5,17 @@
 		color: $color-principal-blanco;
 	}
 }
-#dark-mode:checked ~ .fondo-cla-tex-osc {
+#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro {
 	color: $color-principal-blanco;
 	background-color: $color-principal-negro;
 	.tarjeta {
 		background-color: $color-detalle-fondo-dark-mode;
 	}
-	.logos-de-bebidas {
+	.galerias-de-bebidas__logos {
 		img {
 			filter: invert(94.5%);
 		}
-		.logo-cerv-guinnes {
+		.galerias-de-bebidas__logo--guinnes{
 			filter: none;
 		}
 	}
