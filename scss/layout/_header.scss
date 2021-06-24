@@ -64,6 +64,7 @@
 	padding: 0.625em 0.3125em;
 	width: 6.25em;
 	left: -0.3125em;
+	box-shadow: $box-shadow;
 	@media (max-width: 1024px) {
 		top: 105%; /*para que la sublista no tape el borde del li del menu*/
 	}

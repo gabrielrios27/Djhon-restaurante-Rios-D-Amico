@@ -3,7 +3,7 @@
 .portada-platos {
 	color: $color-principal-negro;
 	@include prefijos-transition($transition-dark);
-	height: calc(100vh - 3.4375em); /*los 50px son los del menu de navegacion*/
+	height: calc(100vh - 3.4375em); /*los 3.4375em son los del menu de navegacion*/
 }
 .portada-platos__img {
 	object-fit: cover;

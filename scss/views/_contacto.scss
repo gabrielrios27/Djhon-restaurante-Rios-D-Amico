@@ -2,7 +2,7 @@
 #contacto-grid {
 	display: grid;
 	grid-template-rows: 55px calc(100vh - 3.4375em) 450px 48px;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1.5fr;
 	grid-template-areas:
 		'menu menu'
 		'info formulario'
@@ -16,7 +16,7 @@
 }
 .info {
 	grid-area: info;
-	background-color: black;
+	background-color: #0d0d0d;
 	color: $color-principal-blanco;
 	width: 100%;
 	height: 100%;
@@ -26,7 +26,7 @@
 	align-items: center;
 	margin: 0 !important;
 }
-.info__img {
+.info__video {
 	width: 15em;
 	height: auto;
 }
@@ -42,6 +42,8 @@
 .formulario {
 	grid-area: formulario;
 	color: $color-principal-negro;
+	background-image: url(../imagenes/img-contacto/blurry-restaurant.jpg);
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -54,8 +56,8 @@
 	}
 }
 .formulario__form {
-	background-color: $color-detalle-dorado-translucido;
-	box-shadow: 0 0 10px 1px $color-detalle-dorado-translucido;
+	background-color: $color-detalle-muy-claro;
+	box-shadow: $box-shadow;
 	display: flex;
 	flex-direction: column;
 	width: 70%;

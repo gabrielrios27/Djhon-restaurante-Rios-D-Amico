@@ -14,7 +14,7 @@
 	.comida__link {
 		color: rgb(245, 245, 245);
 		&:hover {
-			box-shadow: 0px 0px 4px $color-principal-blanco;
+			box-shadow: 0 0 10px 0 rgba(110, 110, 110, 0.4);
 		}
 	}
 }

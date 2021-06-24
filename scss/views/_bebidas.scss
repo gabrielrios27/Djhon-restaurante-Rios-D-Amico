@@ -6,20 +6,23 @@
 	color: $color-principal-negro;
 	@include flex(center);
 	@include prefijos-transition($transition-dark);
-	height: calc(100vh - 3.4375em); /*los 50px son los del menu de navegacion*/
+	height: calc(100vh - 3.4375em); /*los 3.4375em son los del menu de navegacion*/
 	overflow: hidden;
 	.portada-bebidas__info {
 		text-align: center;
 		position: relative;
 		z-index: 10;
-		width: 25em;
+		width: 34em;
 		background-color: rgba(241, 241, 241, 0.74);
 		padding: 20px 40px;
 		border: $border-radius;
+		@media (max-width: 480px) {
+			width: 25em;
+		}
 	}
 	.portada-bebidas__img {
 		width: 100%;
-		height: calc(100vh - 3.4375em); /*los 50px son los del menu de navegacion*/
+		height: calc(100vh - 3.4375em); /*los 3.4375em son los del menu de navegacion*/
 		background-image: url(../imagenes/img-bebidas/vinoteca.jpg);
 		background-position: bottom;
 		background-size: cover;
@@ -30,7 +33,6 @@
 		@include prefijos-transition($transition-dark);
 	}
 }
-
 /* galerias de bebidas */
 .galerias-de-bebidas--fondo-oscuro {
 	color: $color-principal-blanco;

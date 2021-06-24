@@ -123,6 +123,7 @@ a {
   padding: 0.625em 0.3125em;
   width: 6.25em;
   left: -0.3125em;
+  box-shadow: 0 0 10px 0 rgba(110, 110, 110, 0.4);
 }
 @media (max-width: 1024px) {
   .nav__sub-list {
@@ -649,7 +650,6 @@ a {
   flex-direction: column;
   overflow: hidden;
 }
-
 .home:after {
   content: "";
   position: absolute;
@@ -676,7 +676,6 @@ a {
     transform: translateX(-100%);
   }
 }
-
 .home:before {
   content: "";
   width: 0;
@@ -852,7 +851,7 @@ a {
   margin: 0.5em 0;
 }
 
-/*intro y enlace a nuestros platos, bebidas y postres*/
+/*introduccion y enlace a nuestros platos, bebidas y postres*/
 .comida {
   display: flex;
   justify-content: space-around;
@@ -884,7 +883,7 @@ a {
 }
 
 .comida__link:hover {
-  box-shadow: 1px 1px 2px #101010;
+  box-shadow: 0 0 10px 0 rgba(110, 110, 110, 0.4);
   color: #0e0e0e;
 }
 
@@ -990,7 +989,7 @@ a {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   height: calc(100vh - 3.4375em);
-  /*los 50px son los del menu de navegacion*/
+  /*los 3.4375em son los del menu de navegacion*/
 }
 
 .portada-platos__img {
@@ -1057,22 +1056,27 @@ a {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   height: calc(100vh - 3.4375em);
-  /*los 50px son los del menu de navegacion*/
+  /*los 3.4375em son los del menu de navegacion*/
   overflow: hidden;
 }
 .portada-bebidas .portada-bebidas__info {
   text-align: center;
   position: relative;
   z-index: 10;
-  width: 25em;
+  width: 34em;
   background-color: rgba(241, 241, 241, 0.74);
   padding: 20px 40px;
   border: 0.3125em;
 }
+@media (max-width: 480px) {
+  .portada-bebidas .portada-bebidas__info {
+    width: 25em;
+  }
+}
 .portada-bebidas .portada-bebidas__img {
   width: 100%;
   height: calc(100vh - 3.4375em);
-  /*los 50px son los del menu de navegacion*/
+  /*los 3.4375em son los del menu de navegacion*/
   background-image: url(../imagenes/img-bebidas/vinoteca.jpg);
   background-position: bottom;
   background-size: cover;
@@ -1210,7 +1214,7 @@ a {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   height: calc(100vh - 3.4375em);
-  /*los 50px son los del menu de navegacion*/
+  /*los 3.4375em son los del menu de navegacion*/
 }
 
 .portada-postres__info {
@@ -1300,7 +1304,7 @@ a {
 #contacto-grid {
   display: grid;
   grid-template-rows: 55px calc(100vh - 3.4375em) 450px 48px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   grid-template-areas: "menu menu" "info formulario" "mapa mapa" "footer footer";
   align-items: center;
   justify-items: center;
@@ -1312,7 +1316,7 @@ a {
 
 .info {
   grid-area: info;
-  background-color: black;
+  background-color: #0d0d0d;
   color: #fafafa;
   width: 100%;
   height: 100%;
@@ -1323,7 +1327,7 @@ a {
   margin: 0 !important;
 }
 
-.info__img {
+.info__video {
   width: 15em;
   height: auto;
 }
@@ -1342,6 +1346,8 @@ a {
 .formulario {
   grid-area: formulario;
   color: #0e0e0e;
+  background-image: url(../imagenes/img-contacto/blurry-restaurant.jpg);
+  background-size: cover;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1361,8 +1367,8 @@ a {
 }
 
 .formulario__form {
-  background-color: rgba(255, 192, 35, 0.75);
-  box-shadow: 0 0 10px 1px rgba(255, 192, 35, 0.75);
+  background-color: #555555af;
+  box-shadow: 0 0 10px 0 rgba(110, 110, 110, 0.4);
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -1413,7 +1419,7 @@ a {
   color: whitesmoke;
 }
 #dark-mode:checked ~ .comida .comida__link:hover {
-  box-shadow: 0px 0px 4px #fafafa;
+  box-shadow: 0 0 10px 0 rgba(110, 110, 110, 0.4);
 }
 
 #dark-mode:checked ~ #galeria {
@@ -1455,7 +1461,7 @@ a {
   background-color: #0e0e0e;
 }
 #dark-mode:checked ~ .portada-bebidas .portada-bebidas__img {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 #dark-mode:checked ~ .galerias-de-bebidas--fondo-claro {
