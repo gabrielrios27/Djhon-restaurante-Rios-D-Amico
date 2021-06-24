@@ -28,7 +28,6 @@
 		height: 25em * 0.6971;
 	}
 }
-
 /*galeria de postres*/
 .galeria-postres {
 	@include flex(space-around);
@@ -54,7 +53,6 @@
 .presentacion-chef__info {
 	margin: 20px;
 	width: 25em;
-
 }
 .presentacion-chef__titulo {
 	color: $color-detalle-dorado;

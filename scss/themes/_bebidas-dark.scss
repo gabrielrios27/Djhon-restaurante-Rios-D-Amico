@@ -1,11 +1,10 @@
 #dark-mode:checked ~ .portada-bebidas {
 	background-color: $color-principal-negro;
-	color: $color-principal-blanco;
-	.portada-bebidas__info .portada-bebidas__titulo {
-		color: $color-principal-blanco;
+	.portada-bebidas__img {
+		opacity: 0.3;
 	}
 }
-#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro {
+#dark-mode:checked ~ .galerias-de-bebidas--fondo-claro {
 	color: $color-principal-blanco;
 	background-color: $color-principal-negro;
 	.tarjeta {
@@ -15,7 +14,7 @@
 		img {
 			filter: invert(94.5%);
 		}
-		.galerias-de-bebidas__logo--guinnes{
+		.galerias-de-bebidas__logo--guinnes {
 			filter: none;
 		}
 	}

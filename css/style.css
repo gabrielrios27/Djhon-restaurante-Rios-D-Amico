@@ -1045,9 +1045,11 @@ a {
 /*----------------inicio de pestaña de bebidas----------------------*/
 /* portada de bebidas */
 .portada-bebidas {
+  position: relative;
+  width: 100%;
   color: #0e0e0e;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   -webkit-transition: all 0.5s ease-in-out;
@@ -1056,22 +1058,41 @@ a {
   transition: all 0.5s ease-in-out;
   height: calc(100vh - 3.4375em);
   /*los 50px son los del menu de navegacion*/
+  overflow: hidden;
 }
-.portada-bebidas div {
+.portada-bebidas .portada-bebidas__info {
+  text-align: center;
+  position: relative;
+  z-index: 10;
   width: 25em;
+  background-color: rgba(241, 241, 241, 0.74);
+  padding: 20px 40px;
+  border: 0.3125em;
 }
-.portada-bebidas img {
-  width: 49%;
-  height: auto;
+.portada-bebidas .portada-bebidas__img {
+  width: 100%;
+  height: calc(100vh - 3.4375em);
+  /*los 50px son los del menu de navegacion*/
+  background-image: url(../imagenes/img-bebidas/vinoteca.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 5;
+  opacity: 0.6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /* galerias de bebidas */
-.galerias-de-bebidas__fondo-oscuro {
+.galerias-de-bebidas--fondo-oscuro {
   color: #fafafa;
   background-color: #0e0e0e;
 }
 
-.galerias-de-bebidas__fondo-claro {
+.galerias-de-bebidas--fondo-claro {
   color: #0e0e0e;
   background-color: #fafafa;
 }
@@ -1085,7 +1106,7 @@ a {
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  padding: 60px 15px 30px 15px;
+  padding: 40px 15px 30px 15px;
 }
 .galerias-de-bebidas .galerias-de-bebidas__cartel-titulo {
   display: flex;
@@ -1104,16 +1125,13 @@ a {
   text-shadow: 1px 1px 2px rgba(20, 20, 20, 0.76);
   color: #fafafa;
 }
-
-.galerias-de-bebidas__cartel-titulo--vinos {
+.galerias-de-bebidas .galerias-de-bebidas__cartel-titulo--vinos {
   background-image: url(../imagenes/img-bebidas/cartel-vinos.png);
 }
-
-.galerias-de-bebidas__cartel-titulo--cervezas {
+.galerias-de-bebidas .galerias-de-bebidas__cartel-titulo--cervezas {
   background-image: url(../imagenes/img-bebidas/cartel-cervezas.png);
 }
-
-.galerias-de-bebidas__logos {
+.galerias-de-bebidas .galerias-de-bebidas__logos {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1125,7 +1143,12 @@ a {
   margin: 30px 15px;
   width: 100%;
 }
-.galerias-de-bebidas__logos img {
+@media (max-width: 480px) {
+  .galerias-de-bebidas .galerias-de-bebidas__logos {
+    display: none;
+  }
+}
+.galerias-de-bebidas .galerias-de-bebidas__logos .galerias-de-bebidas__logo {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -1133,15 +1156,14 @@ a {
   width: 180px;
   object-fit: contain;
 }
-
-.tarjeta--fondo-blanco {
+.galerias-de-bebidas .tarjeta--fondo-blanco {
   color: #0e0e0e;
   background-color: #fafafa;
 }
 
 /*estilos de la lista de maridaje*/
 #maridaje {
-  padding: 20px 10px 80px 10px;
+  padding: 20px 10px 40px 10px;
   width: 100%;
   color: #fafafa;
   background-color: #0e0e0e;
@@ -1431,23 +1453,22 @@ a {
 
 #dark-mode:checked ~ .portada-bebidas {
   background-color: #0e0e0e;
-  color: #fafafa;
 }
-#dark-mode:checked ~ .portada-bebidas .portada-bebidas__info .portada-bebidas__titulo {
-  color: #fafafa;
+#dark-mode:checked ~ .portada-bebidas .portada-bebidas__img {
+  opacity: 0.3;
 }
 
-#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro {
+#dark-mode:checked ~ .galerias-de-bebidas--fondo-claro {
   color: #fafafa;
   background-color: #0e0e0e;
 }
-#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro .tarjeta {
+#dark-mode:checked ~ .galerias-de-bebidas--fondo-claro .tarjeta {
   background-color: #1f1f1f;
 }
-#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro .galerias-de-bebidas__logos img {
+#dark-mode:checked ~ .galerias-de-bebidas--fondo-claro .galerias-de-bebidas__logos img {
   filter: invert(94.5%);
 }
-#dark-mode:checked ~ .galerias-de-bebidas__fondo-claro .galerias-de-bebidas__logos .galerias-de-bebidas__logo--guinnes {
+#dark-mode:checked ~ .galerias-de-bebidas--fondo-claro .galerias-de-bebidas__logos .galerias-de-bebidas__logo--guinnes {
   filter: none;
 }
 
