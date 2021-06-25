@@ -4,3 +4,9 @@
 		color: $color-principal-blanco;
 	}
 }
+#dark-mode:checked ~ .mapa {
+	background-color: $color-principal-negro;
+	.mapa__fondo {
+		@include prefijos-filter(invert(70%));
+	}
+}

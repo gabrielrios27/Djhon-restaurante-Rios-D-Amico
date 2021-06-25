@@ -1,7 +1,7 @@
 /*-----------------inicio de contacto-------------------------------------*/
 #contacto-grid {
 	display: grid;
-	grid-template-rows: 55px calc(100vh - 3.4375em) 450px 48px;
+	grid-template-rows: 3.4375em calc(100vh - 3.4375em) 470px 48px;
 	grid-template-columns: 1fr 1.5fr;
 	grid-template-areas:
 		'menu menu'
@@ -75,12 +75,32 @@
 	max-height: 140px;
 }
 /*mapa*/
-#mapa {
+.mapa {
 	grid-area: mapa;
 	display: flex;
 	justify-content: center;
+	position: relative;
+	width: 100%;
+	padding: 10px;
+	@include prefijos-transition($transition-dark);
+}
+.mapa__fondo {
+	position: absolute;
+	z-index: 5;
+	background-image: url(../imagenes/img-contacto/fondo-mapa.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+	top: 0;
+	@include prefijos-transition($transition-dark);
+}
+.mapa__iframe {
+	position: relative;
+	z-index: 10;
 }
 .footer--contacto {
 	grid-area: footer;
 	width: 100%;
+	height: 100%;
 }
