@@ -1334,6 +1334,10 @@ a {
   flex-direction: column;
   align-items: center;
   margin: 0 !important;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 @media (max-width: 1024px) {
   .info {
@@ -1427,6 +1431,7 @@ a {
   justify-content: center;
   position: relative;
   width: 100%;
+  height: 470px;
   padding: 14px;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -1452,6 +1457,9 @@ a {
 .mapa__iframe {
   position: relative;
   z-index: 10;
+  width: 90%;
+  max-width: 600px;
+  max-height: 444px;
 }
 
 .footer--contacto {
@@ -1563,11 +1571,14 @@ a {
   color: #fafafa;
 }
 
+#dark-mode:checked ~ .info {
+  background-image: url(../imagenes/img-contacto/fondo-contacto-vertical-para-dark.jpg);
+  -webkit-filter: invert(99%) brightness(0.8);
+  filter: invert(99%) brightness(0.8);
+}
+
 #dark-mode:checked ~ .formulario {
   background-color: #1f1f1f;
-}
-#dark-mode:checked ~ .formulario .formulario__titulo {
-  color: #fafafa;
 }
 
 #dark-mode:checked ~ .mapa {
