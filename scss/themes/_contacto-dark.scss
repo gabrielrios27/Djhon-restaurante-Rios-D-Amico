@@ -1,6 +1,9 @@
 #dark-mode:checked ~ .info {
 	background-image: url(../imagenes/img-contacto/fondo-contacto-vertical-para-dark.jpg);
-	@include prefijos-filter(invert(99%) brightness(0.8));
+	@include prefijos-filter(invert(99%) brightness(0.9));
+	@media (max-width: 1024px) {
+		background-image: url(../imagenes/img-contacto/fondo-contacto-para-dark.jpg);
+	}
 }
 #dark-mode:checked ~ .formulario {
 	background-color: $color-detalle-fondo-dark-mode;
