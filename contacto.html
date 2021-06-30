@@ -139,27 +139,22 @@
 		<!-- formulario -->
 		<section class="formulario">
 			<h2 class="formulario__titulo">Haz una reserva!</h2>
-			<form class="formulario__form" action="contacto.php" method="post">
-				<input
-					class="formulario__input"
-					type="text"
-					id="names"
-					name="nombre"
-					value="Nombre"
-					required
-				/>
-				<input
-					class="formulario__input"
-					type="text"
-					id="email"
-					name="correo"
-					value="Email"
-					required
-				/>
-				<textarea class="formulario__textarea" id="mensaje" name="mensaje" required>
-Escribe tu consulta</textarea
-				>
-				<input class="formulario__input" type="submit" value="Enviar" id="btnSend" />
+			<form action="contacto.php" method="post" class="form_contact">
+				<div class="user_info">
+					<label for="names">Nombres *</label>
+					<input type="text" id="names" name="nombre" required />
+
+					<label for="phone">Celular</label>
+					<input type="text" id="phone" name="telefono" />
+
+					<label for="email">Correo electrónico *</label>
+					<input type="text" id="email" name="correo" required />
+
+					<label for="mensaje">Mensaje *</label>
+					<textarea id="mensaje" name="mensaje" required></textarea>
+
+					<input type="submit" value="Enviar Mensaje" id="btnSend" />
+				</div>
 			</form>
 		</section>
 		<!-- mapa para saber como llegar -->
