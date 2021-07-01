@@ -1409,19 +1409,33 @@ a {
   flex-direction: column;
   width: 70%;
   border-radius: 0.3125em;
+  padding: 30px;
 }
 
 .formulario__input,
 .formulario__textarea,
 .formulario__titulo {
-  margin: 15px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.formulario__label {
+  color: #fafafa;
 }
 
 .formulario__textarea {
-  max-width: calc(100% - 30px);
-  min-width: calc(100% - 30px);
+  max-width: 100%;
+  min-width: 100%;
   min-height: 80px;
   max-height: 140px;
+}
+
+.formulario__textarea:focus,
+.formulario__input:focus,
+.formulario__input[type]:focus {
+  border-color: #ffc023;
+  box-shadow: 0 0 8px rgba(255, 144, 0, 0.6);
+  outline: 0 none;
 }
 
 /*mapa*/
