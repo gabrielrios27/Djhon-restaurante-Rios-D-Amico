@@ -160,6 +160,11 @@
 	@include prefijos-transition(all 0.5s);
 	margin-bottom: 10px;
 }
+.comida__link--order {
+	@media (max-width: 768px) {
+		order: 1;
+	}
+}
 .comida__link:hover {
 	box-shadow: $box-shadow;
 	color: $color-principal-negro;
@@ -198,6 +203,9 @@
 		margin-left: 0; //la imagen y el comida__link estan en diferente orden al resto, asi que el margin left queda en cero y cambiamos el margin right
 		margin-right: (87.5em - (30em + 25em + 0.93em * 2))/2; //para que cuando el ancho de pantalla llegue a 1400px, la imagen y el comida__link queden separadas la misma medida de separacion que traia el justify-content=space-around del contenedor padre, que a los 1400px se transforma en justify-content= center.
 	}
+	@media (max-width: 768px) {
+		order: 2;
+	}
 }
 #galeria {
 	@include flex(center);
@@ -207,12 +215,7 @@
 .galeria__cuerpo {
 	max-width: 950px;
 }
-
 @media only screen and (max-width: 768px) {
-	.comida__link--order {
-		order: -1;
-	}
-
 	/* Para que la animacion de la portada sea horizontal */
 	@keyframes lineas {
 		100% {

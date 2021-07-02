@@ -12,10 +12,11 @@ html {
 
 body {
   background-color: #fafafa;
+  font-size: 18px;
 }
 @media (max-width: 1024px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -882,6 +883,12 @@ a {
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .comida__link--order {
+    order: 1;
+  }
+}
+
 .comida__link:hover {
   box-shadow: 0 0 10px 0 rgba(110, 110, 110, 0.4);
   color: #0e0e0e;
@@ -935,6 +942,11 @@ a {
     margin-right: 15.32em;
   }
 }
+@media (max-width: 768px) {
+  .comida__img--derecha {
+    order: 2;
+  }
+}
 
 #galeria {
   display: flex;
@@ -953,10 +965,6 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-  .comida__link--order {
-    order: -1;
-  }
-
   /* Para que la animacion de la portada sea horizontal */
   @keyframes lineas {
     100% {
@@ -1039,6 +1047,12 @@ a {
 .tarjeta__descripcion {
   text-align: center;
   padding: 5px 20px;
+}
+
+.tarjeta__descripcion {
+  display: inline-block;
+  height: 100px;
+  margin-bottom: 0;
 }
 
 /*----------------inicio de pestaña de bebidas----------------------*/
