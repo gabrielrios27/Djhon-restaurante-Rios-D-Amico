@@ -44,10 +44,10 @@
 	color: $color-principal-blanco;
 }
 .boton-menu__item:hover {
-	background-color: rgba(245, 204, 22, 0.657);
+	background-color: $color-detalle-dorado-translucido;
 }
 .boton-menu__item--activo {
-	background-color: rgba(245, 204, 22, 0.657);
+	background-color: $color-detalle-dorado-translucido;
 }
 .boton-menu__hamburguesa {
 	width: 40px;

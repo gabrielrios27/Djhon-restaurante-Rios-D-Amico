@@ -162,7 +162,7 @@
 }
 .comida__link--order {
 	@media (max-width: 768px) {
-		order: 1;
+		order: -1;
 	}
 }
 .comida__link:hover {
@@ -178,6 +178,9 @@
 		height: 15em;
 		padding: 1.2em;
 	}
+}
+.comida__description {
+	font-weight: 600;
 }
 .comida__ver-mas {
 	margin-top: 0.31em;

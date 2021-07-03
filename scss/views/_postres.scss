@@ -12,6 +12,9 @@
 .portada-postres__titulo {
 	@include prefijos-transition($transition-dark);
 }
+.portada-postres__descripcion {
+	font-weight: 600;
+}
 .portada-postres__img {
 	width: 30em;
 	height: 30em * 0.6971;
@@ -57,4 +60,7 @@
 .presentacion-chef__titulo {
 	color: $color-detalle-dorado;
 	text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.884);
+}
+.presentacion-chef__descripcion {
+	font-weight: 600;
 }

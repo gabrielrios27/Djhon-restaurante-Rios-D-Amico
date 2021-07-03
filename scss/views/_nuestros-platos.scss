@@ -13,6 +13,9 @@
 		object-fit: contain;
 	}
 }
+.portada-platos__descripcion {
+	font-weight: 600;
+}
 /* galeria de platos */
 .galeria-de-platos {
 	@include flex(space-around);

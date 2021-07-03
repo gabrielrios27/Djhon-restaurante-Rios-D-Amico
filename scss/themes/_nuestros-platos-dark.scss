@@ -4,6 +4,9 @@
 	.portada-platos__cuerpo .portada-platos__info .portada-platos__titulo {
 		color: $color-principal-blanco;
 	}
+	.portada-platos__cuerpo .portada-platos__info .portada-platos__descripcion {
+		font-weight: 400;
+	}
 }
 #dark-mode:checked ~ .galeria-de-platos {
 	background-color: $color-principal-negro;

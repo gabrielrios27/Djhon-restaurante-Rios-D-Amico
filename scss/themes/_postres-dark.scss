@@ -1,8 +1,13 @@
 #dark-mode:checked ~ .portada-postres {
 	background-color: $color-principal-negro;
 	color: $color-principal-blanco;
-	.portada-postres__info .portada-postres__titulo {
-		color: $color-principal-blanco;
+	.portada-postres__info {
+		.portada-postres__titulo {
+			color: $color-principal-blanco;
+		}
+		.portada-postres__descripcion {
+			font-weight: 400;
+		}
 	}
 }
 #dark-mode:checked ~ .portada-postres .portada-postres__img {
@@ -18,4 +23,9 @@
 #dark-mode:checked ~ .presentacion-chef {
 	background-color: $color-principal-negro;
 	color: $color-principal-blanco;
+	.presentacion-chef__info {
+		.presentacion-chef__descripcion {
+			font-weight: 400;
+		}
+	}
 }

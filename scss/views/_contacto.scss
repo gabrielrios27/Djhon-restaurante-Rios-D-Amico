@@ -1,4 +1,4 @@
-/*-----------------inicio de contacto-uso grid-------------------------------------*/
+/*-----------------inicio de contacto-practico grid-------------------------------------*/
 #contacto-grid {
 	display: grid;
 	grid-template-rows: 3.4375em calc(100vh - 3.4375em) 470px 48px;
@@ -67,6 +67,7 @@
 	text-align: center;
 	margin-top: 10px;
 	font-size: 20px;
+	font-weight: 600;
 }
 /*formulario*/
 .formulario {
@@ -101,7 +102,8 @@
 	font-weight: 700;
 }
 .formulario__label {
-	color: $color-principal-blanco;
+	color: $color-principal-negro;
+	font-weight: 600;
 }
 .formulario__textarea {
 	max-width: 100%;
